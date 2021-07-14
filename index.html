@@ -12,33 +12,35 @@
     <title>Свадебный салон «Ева»</title>
 </head>
 <body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav__logo">
+                <img class="nav__logo-black" src="images/logo.svg" alt='logo'>
+                <img class="nav__logo-white" src="images/logo-white.svg" alt='logo'>
+            </div>
+
+            <ul class="nav__navbar">
+                <li class="nav__navbar-item"><a href="#about">О нас</a></li>
+                <li class="nav__navbar-item"><a href="#slider">Галлерея</a></li>
+                <li class="nav__navbar-item"><a href="#flavour">Аксессуары</a></li>
+                <li class="nav__navbar-item"><a href="#footer">Контакты</a></li>
+            </ul>
+            
+            <div class="nav__burger">
+                <div class="nav__burger-btn"></div>
+            </div>
+            <div class="nav__menu">
+                <div class="menu-wrap">
+                    <div><a class="burger__item" href="#about">О нас</a></div>
+                    <div><a class="burger__item" href="#slider">Галлерея</a></div>
+                    <div><a class="burger__item" href="#flavour">Аксессуары</a></div>
+                    <div><a class="burger__item" href="#footer">Контакты</a></div>
+                </div>
+            </div>
+        </nav>
+    </header>
     <!-- hero -->
     <div class="outer-wrap hero-image">
-        <header class="header">
-            <nav class="nav">
-                <div class="nav__logo">
-                    <img class="nav__logo-black" src="images/logo.svg" alt='logo'>
-                    <img class="nav__logo-white" src="images/logo-white.svg" alt='logo'>
-                </div>
-
-                <ul class="nav__navbar">
-                    <li class="nav__navbar-item"><a href="#">О нас</a></li>
-                    <li class="nav__navbar-item"><a href="#">Галлерея</a></li>
-                    <li class="nav__navbar-item"><a href="#">Аксессуары</a></li>
-                    <li class="nav__navbar-item"><a href="#">Контакты</a></li>
-                </ul>
-                
-                <div class="nav__burger">
-                    <div class="nav__burger-btn"></div>
-                </div>
-                <div class="nav__menu">
-                    <div><a class="burger__item" href="#">О нас</a></div>
-                    <div><a class="burger__item" href="#">Галлерея</a></div>
-                    <div><a class="burger__item" href="#">Аксессуары</a></div>
-                    <div><a class="burger__item" href="#">Контакты</a></div>
-                </div>
-            </nav>
-        </header>
         <div class="inner-wrap">
             <div class="hero-section">
                 <h1 class="hero-section__header">Свадебный салон «Ева»</h1>
@@ -46,15 +48,15 @@
                     Наш салон- бесконечный выбор среди эсклюзивных моделей свадебных платьев 
                     и аксессуаров.
                 </p>
-                <button class="hero-section__button">Связаться с нами</button>
+                <button class="hero-section__button"><a href="#footer">Связаться с нами</a></button>
             </div>
         </div>
     </div>
     <!-- /hero -->
     <!-- about -->
-    <div class="outer-wrap">
-        <div class="inner-wrap about-section">
-            <div class="about-section__text-wrap">
+    <div id="about" class="outer-wrap">
+        <div  class="inner-wrap about-section">
+            <div  class="about-section__text-wrap">
                 <h2 class="about-section__header semiheader">О нас</h2>
                 <p class="about-section__text text"> Есть только мечты и фантазии об уникальном дне? Хочется, чтобы он запомнился не только Вам, но и всем, кто будет рядом? Именно поэтому вам стоит выбрать именно нас. 
                     Индивидуальный подход, учитывающий все Ваши пожелания и мечты. Ведь для  невесты очень важно, чтобы та сказка, о которой она мечтала в девичьих грезах, воплотилась в реальность.
@@ -69,26 +71,39 @@
     <!-- slider -->
     <div class="outer-wrap slider-background">
         <div class="inner-wrap">
-            <div class="slider-section">
+            <div id="slider" class="slider-section">
                 <div class="slider-section__content">
-                    <div class="slider-section__slider slider">
-                        <img class="slider__image" src="images/slider-image-1.png" alt="woman in a wedding dress">
+                    <div class="slider-section__slider slider-container slider">
+                        <div class="slider-track">
+                            <img class="slider__image slide first-item slide_active" src="images/slider-image-1.png" alt="woman in a wedding dress">
+                            <img class="slider__image slide second-item" src="images/slider-image-2.png" alt="woman in a wedding dress turn back">
+                            <img class="slider__image slide third-item" src="images/slider-image-3.png" alt="woman in a wedding dress in the corner">
+                        </div>
+                    </div>
+                    <div class="mini-slider-wrap">
+                        <div class="mini-slider-btn-left"></div>
+                        <div class="mini-slider">
+                            <img class="mini-slide first-mini-slide mini-slide-prev" src="images/slider-image-1.png" alt="woman in a wedding dress">
+                            <img class="mini-slide second-mini-slide  mini-slide-active" src="images/slider-image-2.png" alt="woman in a wedding dress turn back">
+                            <img class="mini-slide third-mini-slide mini-slide-next" src="images/slider-image-3.png" alt="woman in a wedding dress in the corner">
+                        </div>
+                        <div class="mini-slider-btn-right"></div>
+                    </div>
+                        <div class="slider-section__text-wrap">
+                            <h2 class="slider-section__header semiheader">Свадебные платья</h2>
+                            <p class="slider-section__text text">Подбирая свадебное платье в салоне "Ева",
+                                Вы обязательно найдете именно свое 
+                                единственное и неповторимое.
+                                У нас представлены лучшие свадебные платья.
+                                Мы рады предложить различные аксессуары, призванные дополнить свадебное платье и внести особый шарм в наряд счастливой невесты.
+                            </p>
+                        </div>
                         
-                    </div>
-                    <div class="slider-section__text-wrap">
-                        <h2 class="slider-section__header semiheader">Свадебные платья</h2>
-                        <p class="slider-section__text text">Подбирая свадебное платье в салоне "Ева",
-                            Вы обязательно найдете именно свое 
-                            единственное и неповторимое.
-                            У нас представлены лучшие свадебные платья.
-                            Мы рады предложить различные аксессуары, призванные дополнить свадебное платье и внести особый шарм в наряд счастливой невесты.
-                        </p>
-                    </div>
                 </div>
                 <div class="slider-section__controls controls">
                     <div class="controls__buttons">
-                        <span class="controls__button controls__button-left"></span>
-                        <span class="controls__button controls__button-right controls__button_disabled"></span>
+                        <div class="controls__button controls__button-left controls__button_disabled"></div>
+                        <div class="controls__button controls__button-right"></div>
                     </div>
                     <div class="controls__progress">
                         <span class="controls__big-line"></span>
@@ -100,8 +115,8 @@
     </div>
     <!-- /slider -->
     <!-- flavour -->
-    <div class="outer-wrap">
-        <div class="inner-wrap flavour">
+    <div id="flavour" class="outer-wrap">
+        <div  class="inner-wrap flavour">
             <div class="flavour__text-wrap">
                 <h2 class="flavour__header semiheader">Букет невесты</h2>
                 <p class="flavour__text text">
@@ -129,7 +144,7 @@
     <!-- footer -->
     <div class="outer-wrap footer-background">
         <div class="inner-wrap">
-            <footer class="footer">
+            <footer id="footer" class="footer">
                 <div class="footer__left">
                     <h2 class="footer__left-header">Наши адреса</h2>
                     <div class="footer__left-content-wrap">
@@ -153,11 +168,11 @@
                         </li>
                         <li class="footer__right-contact">
                             <img class="footer-image foooter__right-contact-image" src="images/whatsUp.svg">
-                            <p class="footer__right-contact-text"><a href="#">+7 989 515-74-66</a></p>
+                            <p class="footer__right-contact-text"><a href="https://www.whatsapp.com/?lang=ru">+7 989 515-74-66</a></p>
                         </li>
                         <li class="footer__right-contact">
                             <img class="footer-image foooter__right-contact-image" src="images/instagram.svg">
-                            <p class="footer__right-contact-text"><a href="#">svadebniy.salon.eva</a></p>
+                            <p class="footer__right-contact-text"><a href="https://www.instagram.com/svadebniy.salon.eva/">svadebniy.salon.eva</a></p>
                         </li>
                     </ul>
                     <img class="footer__right-logo" src="images/logo-white.svg" alt="logo">
